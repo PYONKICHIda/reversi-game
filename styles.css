@@ -7,20 +7,22 @@ body {
 
 #board {
   display: grid;
-  grid-template-columns: repeat(8, 50px);
-  grid-template-rows: repeat(8, 50px);
-  gap: 2px;
+  grid-template-columns: repeat(8, 75px); /* セルの幅を75pxに設定 */
+  grid-template-rows: repeat(8, 75px); /* セルの高さを75pxに設定 */
+  gap: 0; /* セルの間隔をゼロに設定 */
   margin-top: 20px;
+  border: 2px solid black; /* ボード全体に境界線を追加 */
 }
 
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 75px; /* セルの幅を75pxに設定 */
+  height: 75px; /* セルの高さを75pxに設定 */
   background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border: 1px solid black; /* 各セルに境界線を追加 */
 }
 
 .cell.black {
@@ -29,4 +31,10 @@ body {
 
 .cell.white {
   background-color: white;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
