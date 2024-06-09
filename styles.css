@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 2px;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell.black {
+  background-color: black;
+}
+
+.cell.white {
+  background-color: white;
+}
